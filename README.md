@@ -1,6 +1,6 @@
 # SonicMood 
 
-Music sentiment analysis web app that fetches song lyrics for title and artist entered by user. The lyrics are analyzed using VADER SentimentIntensityAnalyzer and deemed as "Positive", "Negative", or "Neutral". Results include a witty phrase based on outcome.
+Music sentiment analysis web app that fetches song lyrics for title and artist entered by user. The a call is made using OpenAI API. Results include a witty phrase based on user entry.
 
 
 ## Installation 
