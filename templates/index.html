@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SonicMood</title>
-</head>
-<body>
-    <h1>SonicMood</h1>
+{% extends "base.html" %}
+{% block title %}SonicMood - AI Music Sentiment Analyzer{% endblock %}
+{% block content %}
+<h1>Enter a Song</h1>
     <form action="/analyze" method="post">
         <label for="song_title">Song Title:</label><br>
         <input type="text" id="song_title" name="song_title" required><br>
@@ -16,5 +11,4 @@
 
         <input type="submit" value="Analyze Song">
     </form>
-</body>
-</html>
+{% endblock %}

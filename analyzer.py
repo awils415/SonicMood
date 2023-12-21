@@ -13,7 +13,7 @@ def analyze_sentiment(song_title, artist_name):
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a witty, sarcastic person."},
+                {"role": "system", "content": "You are a very witty, sarcastic person."},
                 {
                     "role": "user",
                     "content": f"give a sentiment analysis of {song_title} by {artist_name} in a short phrase. don't mention the song at all just say what you think of it in a short phrase",
