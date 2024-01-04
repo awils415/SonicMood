@@ -1,14 +1,20 @@
 {% extends "base.html" %}
 {% block title %}SonicMood - AI Music Sentiment Analyzer{% endblock %}
 {% block content %}
-<h1>Enter a Song</h1>
-    <form action="/analyze" method="post">
-        <label for="song_title">Song Title:</label><br>
-        <input type="text" id="song_title" name="song_title" required><br>
-
-        <label for="artist_name">Artist Name:</label><br>
-        <input type="text" id="artist_name" name="artist_name" required><br>
-
-        <input type="submit" value="Analyze Song">
-    </form>
+<div class="container">
+    <h1 class="text-center p-2">Enter a Song</h1>
+        <form class="text-center p-1" action="/analyze" method="post">
+            <div class="mb-3">
+                <label class="custom-input" for="song_title">Song Title:</label><br>
+                <input type="text" id="song_title" name="song_title" required><br>
+            </div>
+    
+            <div class="mb-3">
+                <label class="custom-input" for="artist_name">Artist Name:</label><br>
+                <input type="text" id="artist_name" name="artist_name" required><br>
+            </div>
+    
+            <input class="custom-button" type="submit" value="Analyze Song">
+        </form>
+</div>
 {% endblock %}

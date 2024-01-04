@@ -1,17 +1,21 @@
+<!-- TODO: Make it pretty -->
+
 {% extends "base.html" %}
 {% block title %}SonicMood - Results{% endblock %}
 {% block content %}
-<h1>Results</h1>
-<p>
+<h1 class="text-center p-2">Results</h1>
+
+<p class="text-center">
     Analyzing the song "<strong>{{ song_title }}</strong>" by <strong>{{ artist_name }}</strong>:
     <br>
     Sentiment: {{ sentiment }}
-
-    {% if cover_art_url %}
-        <img src="{{ cover_art_url }}" alt="Cover Art" style="max-width: 300px">
-    {% else %}
-        <p>Cover art not available.</p>
-    {% endif %}
 </p>
-{% endblock %}
 
+{% if cover_art_url %}
+    <p class="text-center">
+        <img class="centered-image" src="{{ cover_art_url }}" alt="Cover Art" style="max-width: 200px">
+    </p>
+{% else %}
+    <p class="text-center">Cover art not available.</p>
+{% endif %}
+{% endblock %}

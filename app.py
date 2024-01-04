@@ -2,8 +2,7 @@ from flask import Flask, render_template, request
 from analyzer import analyze_sentiment
 from cover_art import get_cover_art
 
-app = Flask(__name__)
-
+app = Flask(__name__, static_url_path='/static')
 
 @app.route("/")
 def index():
